@@ -151,18 +151,3 @@ button {
     font-size: 0.85rem;
     flex: 1;
 }
-
-.qr-box {
-    background: white;
-    padding: 1px;
-    border-radius: 4px;
-    width: 44px;
-    height: 44px;
-    position: absolute;
-    bottom: 3.5px;
-    right: 12px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}

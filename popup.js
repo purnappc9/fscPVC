@@ -47,26 +47,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const frontMembers = filteredMembers.slice(0, 6);
         const backMembers = filteredMembers.length > 6 ? filteredMembers.slice(6, 12) : [];
 
-        // Create Data URL for QR (pointing to your GitHub Pages viewer with encoded data)
-        // Optimized: only encode necessary data to keep QR density low and scannable
-        const qrData = {
-            f: details.fscNo,
-            r: details.fscRefNo,
-            h: details.hof,
-            d: details.district,
-            g: details.gasConnection,
-            c: details.consumerNo,
-            s: details.fpShopNo,
-            o: details.oldRCNo,
-            m: members.map(m => m.name.substring(0, 20)) // Keep names short for QR
-        };
+        const frontMembers = filteredMembers.slice(0, 6);
+        const backMembers = filteredMembers.length > 6 ? filteredMembers.slice(6, 12) : [];
 
-        // Use btoa with encodeURIComponent for safe URL passing
-        const encodedData = btoa(encodeURIComponent(JSON.stringify(qrData)));
-        const qrUrl = `https://purnappc9.github.io/fscPVC/viewer.html?d=${encodedData}`; // Changed # to ? for better parameter handling
-
-        // Increased size to 250 and added margin=0 for better display in the small box
-        const qrImg = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(qrUrl)}&margin=0&ecc=L`;
 
         const generateSideHtml = (sideId, sideTitle, memberList) => {
             const memberRows = memberList.map(m => `<tr><td style="width:22px; color:#aaa;">${m.sno}</td><td style="font-weight:700;">${m.name}</td></tr>`).join('');
@@ -93,9 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                     <div class="card-footer">
                         <div class="hof-label">HOF: ${details.hof}</div>
-                        <div class="qr-box">
-                            <img src="${qrImg}" width="42" height="42">
-                        </div>
                     </div>
                 </div>
             `;
