@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div id="${sideId}" class="pvc-card">
                     <div class="card-header">${sideTitle} - TELANGANA (${details.district || 'WARANGAL'})</div>
                     <div class="card-content-split">
-                        <div class="info-side">
+                        <div class="info-side fsc-main-number">
                             <div><label>FSC NUMBER</label><strong>${details.fscNo || '---'}</strong></div>
                             <div><label>REF NO</label><strong>${details.fscRefNo || '---'}</strong></div>
                             <div><label>DISTRICT</label><strong>${details.district || '---'}</strong></div>

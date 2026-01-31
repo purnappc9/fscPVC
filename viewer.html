@@ -78,6 +78,13 @@
             font-weight: 500;
         }
 
+        .larger-fsc-no {
+            font-size: 1.4rem !important;
+            color: #004d40 !important;
+            letter-spacing: 1px;
+        }
+
+
         .member-table {
             width: 100%;
             border-collapse: collapse;
@@ -178,9 +185,10 @@
             const detailsView = document.getElementById('details-view');
             mapping.forEach(([label, val]) => {
                 if (val) {
+                    const extraClass = label === 'New Ration Card No' ? 'larger-fsc-no' : '';
                     detailsView.innerHTML += `
                         <div class="grid-item label">${label}</div>
-                        <div class="grid-item value">${val}</div>
+                        <div class="grid-item value ${extraClass}">${val}</div>
                     `;
                 }
             });
