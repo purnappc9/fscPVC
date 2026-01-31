@@ -100,6 +100,20 @@ button {
     margin-bottom: 5px;
 }
 
+.fsc-main-number div:first-child {
+    margin-bottom: 8px;
+    border-bottom: 2px solid #e0f2f1;
+    padding-bottom: 4px;
+}
+
+.fsc-main-number div:first-child strong {
+    font-size: 1.1rem;
+    color: #004d40;
+    display: block;
+    line-height: 1.2;
+}
+
+
 .info-side label {
     display: block;
     color: #888;
